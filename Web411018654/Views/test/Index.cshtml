@@ -5,14 +5,19 @@
 
 <h2>Index</h2>
 
-<form>
-    帳號:<input type="text" name="account" value=""><br>
-    密碼:<input type="password" name="password" value=""><br>
-    年齡:<input type="number" name="" value=""><br>
-    性別:<input type="radio" name="gender" value="a">男生
-        <input type="radio" name="gender" value="B">女生<br>
-    興趣:<input type="checkbox" name="item" value="A" />看書
-        <input type="checkbox" name="item" value="B" />游泳
-</form>
-   
+@using (Html.BeginForm("Index", "Test", FormMethod.Post))
+{
+    <div>
+        帳號:@Html.TextBox("account")<br>
+        密碼:@Html.Password("password")<br>
+        年齡:@Html.TextBox("age")<br>
+        性別:@Html.RadioButton("gender", "A")男生<br>
+        @Html.RadioButton("gender", "B")女生<br>
+        興趣:@Html.CheckBox("reading", "A")看書
+        @Html.CheckBox("swimming", "b")游泳<br>
+        關於我:@Html.TextArea("about")
+    </div>
+ }
+
+
 
