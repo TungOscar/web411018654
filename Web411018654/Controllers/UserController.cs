@@ -27,7 +27,7 @@ namespace Web411018654.Controllers
             }if(Password.IsNullOrWhiteSpace())
             {
                 ViewBag.PasswordMessage = "請輸入密碼";
-            }if (!name.IsNullOrWhiteSpace() && account.IsNullOrWhiteSpace() && Password.IsNullOrWhiteSpace())
+            }if (!name.IsNullOrWhiteSpace() && !account.IsNullOrWhiteSpace() && !Password.IsNullOrWhiteSpace())
             {
                 ViewBag.Message = "註冊成功";
             }
