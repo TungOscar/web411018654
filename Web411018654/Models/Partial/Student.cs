@@ -17,7 +17,7 @@ namespace Web411018654.Models
         [Required(ErrorMessage = "請填寫姓名")]
         [Display(Name = "姓名")]
         [StringLength(5, MinimumLength = 2, ErrorMessage = "請輸入2~5字")]
-        public string Name
+        public string Username
         {
             get; set;
         }
